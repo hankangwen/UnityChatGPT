@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GetOpenAI : MonoBehaviour
 {
     //API key
-	private string m_OpenAI_Key="填写你的Key";
+	[SerializeField]private string m_OpenAI_Key="填写你的Key";
 	// 定义Chat API的URL
 	private string m_ApiUrl = "https://api.openai.com/v1/completions";
     //配置参数
