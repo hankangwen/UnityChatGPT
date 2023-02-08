@@ -15,7 +15,6 @@ public class GetOpenAI : MonoBehaviour
     //输入的信息
     [SerializeField]private InputField m_InputWord;
     //聊天文本放置的层
-    [SerializeField]private Transform m_ChatParent;
     [SerializeField]private RectTransform m_rootTrans;
     //发送聊天气泡
     [SerializeField]private ChatPrefab m_PostChatPrefab;
