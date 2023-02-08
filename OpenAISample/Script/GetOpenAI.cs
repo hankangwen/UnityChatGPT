@@ -31,7 +31,7 @@ public class GetOpenAI : MonoBehaviour
             return;
 
         string _msg=m_InputWord.text;
-        ChatPrefab _chat=Instantiate(m_PostChatPrefab,m_ChatParent);
+        ChatPrefab _chat=Instantiate(m_PostChatPrefab,m_rootTrans.transform);
         _chat.SetText(_msg);
         //重新计算容器尺寸
         LayoutRebuilder.ForceRebuildLayoutImmediate(m_rootTrans);
@@ -43,7 +43,7 @@ public class GetOpenAI : MonoBehaviour
     //AI回复的信息
     private void CallBack(string _callback){
         _callback=_callback.Trim();
-        ChatPrefab _chat=Instantiate(m_RobotChatPrefab,m_ChatParent);
+        ChatPrefab _chat=Instantiate(m_RobotChatPrefab,m_rootTrans.transform);
         _chat.SetText(_callback);
         //重新计算容器尺寸
         LayoutRebuilder.ForceRebuildLayoutImmediate(m_rootTrans);
